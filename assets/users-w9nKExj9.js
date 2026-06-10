@@ -1,0 +1,1 @@
+var e=`/mind-bridge/assets/users-C8SqkVwx.png`;export{e as t};
