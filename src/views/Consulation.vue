@@ -280,13 +280,35 @@ onMounted(() => {
 <style scoped lang="scss">
 .consultation-container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   gap: 20px;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 
   .sidebar {
     width: 320px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .consultation-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+
+    .sidebar {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .consultation-container {
+    padding: 5px;
+    gap: 10px;
   }
 }
 </style>

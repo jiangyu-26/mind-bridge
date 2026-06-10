@@ -193,13 +193,14 @@ const submitDiary = async () => {
   .header-section {
     background: linear-gradient(135deg, #7ed321 0%, #f5a623 100%);
     color: white;
-    padding: 48px;
+    padding: 32px 15px;
 
     .header-content {
       display: flex;
       align-items: center;
       gap: 12px;
-      width: 980px;
+      max-width: 980px;
+      width: 100%;
       margin: 0 auto;
 
       .header-icon {
@@ -209,7 +210,7 @@ const submitDiary = async () => {
 
       h1 {
         margin: 0;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 700;
       }
     }
@@ -217,8 +218,9 @@ const submitDiary = async () => {
 
   .content {
     margin: 0 auto;
-    width: 980px;
-    padding: 20px;
+    max-width: 980px;
+    width: 100%;
+    padding: 20px 15px;
 
     .diary-card {
       margin-bottom: 20px;
@@ -229,7 +231,7 @@ const submitDiary = async () => {
 
       .title {
         margin-bottom: 20px;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 600;
         color: #374151;
       }
@@ -311,6 +313,102 @@ const submitDiary = async () => {
         gap: 10px;
         color: #374151;
         font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .emotionDiary-container {
+    .header-section {
+      padding: 24px 12px;
+
+      .header-content {
+        .header-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .content {
+      padding: 15px 12px;
+
+      .diary-card {
+        padding: 15px;
+
+        .title {
+          font-size: 20px;
+        }
+
+        .emotion-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+
+          .emotion-card {
+            height: 100px;
+
+            .emotion-icon {
+              width: 40px;
+              height: 40px;
+            }
+
+            .emotion-name {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .emotionDiary-container {
+    .header-section {
+      padding: 20px 10px;
+
+      .header-content {
+        .header-icon {
+          width: 35px;
+          height: 35px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .content {
+      padding: 10px 8px;
+
+      .diary-card {
+        padding: 12px;
+        margin-bottom: 15px;
+
+        .title {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+
+        .emotion-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
+          .emotion-card {
+            height: 100px;
+
+            .emotion-icon {
+              width: 44px;
+              height: 44px;
+            }
+          }
+        }
       }
     }
   }
