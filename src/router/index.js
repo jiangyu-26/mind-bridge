@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const backendRoutes = [
   {
@@ -97,7 +97,7 @@ const frontRoutes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/mind-bridge/'),
+  history: createWebHashHistory('/mind-bridge/'),
   routes: [...backendRoutes, ...frontRoutes]
 })
 
