@@ -181,7 +181,7 @@ const startAiResponse = (sessionId, text) => {
   const aiMessage = appendAiMessage();
   const token = localStorage.getItem('token');
 
-  fetchEventSource('/api/psychological-chat/stream', {
+  fetchEventSource('http://159.75.169.224:1235/api/psychological-chat/stream', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
