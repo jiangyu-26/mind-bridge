@@ -181,7 +181,7 @@ const startAiResponse = (sessionId, text) => {
   const aiMessage = appendAiMessage();
   const token = localStorage.getItem('token');
 
-  fetchEventSource('https://cors-anywhere.herokuapp.com/http://159.75.169.224:1235/api/psychological-chat/stream', {
+  fetchEventSource('https://cors.bridged.cc/http://159.75.169.224:1235/api/psychological-chat/stream', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

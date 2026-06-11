@@ -3,8 +3,8 @@ import { ElMessage } from 'element-plus';
 
 // axios 实例
 const service = axios.create({
-  baseURL: 'https://cors-anywhere.herokuapp.com/http://159.75.169.224:1235/api',
-  timeout: 5000
+  baseURL: 'https://cors.bridged.cc/http://159.75.169.224:1235/api',
+  timeout: 30000
 });
 
 // 请求拦截器
